@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <H3>Update the post</H3>
+    <form action="/update/<%= post._id %>" method="post">
+        <textarea placeholder="what's on your mind" name="content" id=""><%=post.content %></textarea>
+        <input type="submit" value="update post">
+    </form>
+    
+</body>
+</html>

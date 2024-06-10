@@ -8,6 +8,9 @@
 <body>
     <a href="/logout">logout</a>
     <h3>profile page</h3>
+    <div style="height: 50px; width: 50px; background-color: red;">
+    <img style="width: 50px;  height: 50px; object-fit: cover;" src="/images/uploads/<%=user.profilepic%>" alt="" srcset="">
+    </div>
     <h3> hello,<%= user.username %></h3>
     <h5>you can create a post.</h5>
     <form action="/post" method="post">

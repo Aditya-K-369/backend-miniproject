@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -36,4 +37,41 @@
         </div>
     </div>
 </body>
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a href="/logout">logout</a>
+    <h3>profile page</h3>
+    <h3> hello,<%= user.username %></h3>
+    <h5>you can create a post.</h5>
+    <form action="/post" method="post">
+        <textarea placeholder="what's on your mind" name="content" id=""></textarea>
+        <input type="submit" value="submit">
+    </form>
+    <div class="posts">
+        <h3>your posts.</h3>
+        <div class="postcontainer">
+            <%user.posts.reverse().forEach(function(post){%>
+                <div class="post">
+                    <h4><%= user.username%></h4>
+                    <p><%= post.content %></p>
+                    <small><%= post.likes.length %>likes</small>
+                    <div class="btns">
+                        <a href="/like/<%= post._id %>">
+                        <%=post.likes.indexOf(user._id)===-1?"like":"unlike" %>
+                        </a>
+                        <a href="/edit/<%=post._id%>">edit</a>
+                    </div>
+                </div>    
+            <%})%>
+        </div>
+    </div>
+</body>
+>>>>>>> 7acc39341ddb547339b0f4405eb27f0cb7b3a9de
 </html>
